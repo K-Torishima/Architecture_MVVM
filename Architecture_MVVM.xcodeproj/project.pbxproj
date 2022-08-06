@@ -13,6 +13,8 @@
 		16899019289DEE86006FC19D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16899017289DEE86006FC19D /* Main.storyboard */; };
 		1689901B289DEE88006FC19D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1689901A289DEE88006FC19D /* Assets.xcassets */; };
 		1689901E289DEE88006FC19D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1689901C289DEE88006FC19D /* LaunchScreen.storyboard */; };
+		16899030289DF1E8006FC19D /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 1689902F289DF1E8006FC19D /* Swinject */; };
+		16899033289DF1F6006FC19D /* SwinjectStoryboard in Frameworks */ = {isa = PBXBuildFile; productRef = 16899032289DF1F6006FC19D /* SwinjectStoryboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16899033289DF1F6006FC19D /* SwinjectStoryboard in Frameworks */,
+				16899030289DF1E8006FC19D /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +89,10 @@
 			dependencies = (
 			);
 			name = Architecture_MVVM;
+			packageProductDependencies = (
+				1689902F289DF1E8006FC19D /* Swinject */,
+				16899032289DF1F6006FC19D /* SwinjectStoryboard */,
+			);
 			productName = Architecture_MVVM;
 			productReference = 1689900E289DEE86006FC19D /* Architecture_MVVM.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +121,10 @@
 				Base,
 			);
 			mainGroup = 16899005289DEE86006FC19D;
+			packageReferences = (
+				1689902E289DF1E8006FC19D /* XCRemoteSwiftPackageReference "Swinject" */,
+				16899031289DF1F6006FC19D /* XCRemoteSwiftPackageReference "SwinjectStoryboard" */,
+			);
 			productRefGroup = 1689900F289DEE86006FC19D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -360,6 +372,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1689902E289DF1E8006FC19D /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.8.2;
+			};
+		};
+		16899031289DF1F6006FC19D /* XCRemoteSwiftPackageReference "SwinjectStoryboard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectStoryboard.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1689902F289DF1E8006FC19D /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1689902E289DF1E8006FC19D /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		16899032289DF1F6006FC19D /* SwinjectStoryboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16899031289DF1F6006FC19D /* XCRemoteSwiftPackageReference "SwinjectStoryboard" */;
+			productName = SwinjectStoryboard;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 16899006289DEE86006FC19D /* Project object */;
 }
