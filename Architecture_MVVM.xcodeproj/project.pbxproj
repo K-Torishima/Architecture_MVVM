@@ -62,15 +62,87 @@
 		16899010289DEE86006FC19D /* Architecture_MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				16899011289DEE86006FC19D /* AppDelegate.swift */,
-				16899013289DEE86006FC19D /* SceneDelegate.swift */,
-				16899015289DEE86006FC19D /* ViewController.swift */,
-				16899017289DEE86006FC19D /* Main.storyboard */,
+				16899035289DF264006FC19D /* Scurce */,
+				16899036289DF276006FC19D /* Resource */,
+			);
+			path = Architecture_MVVM;
+			sourceTree = "<group>";
+		};
+		16899034289DF259006FC19D /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		16899035289DF264006FC19D /* Scurce */ = {
+			isa = PBXGroup;
+			children = (
+				1689903A289DF3BB006FC19D /* Application */,
+				1689903B289DF426006FC19D /* Domain */,
+				1689903C289DF49D006FC19D /* Presentation */,
+			);
+			path = Scurce;
+			sourceTree = "<group>";
+		};
+		16899036289DF276006FC19D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
 				1689901A289DEE88006FC19D /* Assets.xcassets */,
 				1689901C289DEE88006FC19D /* LaunchScreen.storyboard */,
 				1689901F289DEE88006FC19D /* Info.plist */,
 			);
-			path = Architecture_MVVM;
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		16899037289DF301006FC19D /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				16899015289DEE86006FC19D /* ViewController.swift */,
+				16899017289DEE86006FC19D /* Main.storyboard */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		16899038289DF332006FC19D /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		16899039289DF357006FC19D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		1689903A289DF3BB006FC19D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				16899011289DEE86006FC19D /* AppDelegate.swift */,
+				16899013289DEE86006FC19D /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		1689903B289DF426006FC19D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				16899039289DF357006FC19D /* Entity */,
+				16899038289DF332006FC19D /* Repository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		1689903C289DF49D006FC19D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				16899034289DF259006FC19D /* DI */,
+				16899037289DF301006FC19D /* Screen */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,7 +375,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NZSUHT5DUD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Architecture_MVVM/Info.plist;
+				INFOPLIST_FILE = Architecture_MVVM/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -331,7 +403,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NZSUHT5DUD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Architecture_MVVM/Info.plist;
+				INFOPLIST_FILE = Architecture_MVVM/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
