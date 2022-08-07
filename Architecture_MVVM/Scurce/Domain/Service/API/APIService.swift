@@ -11,27 +11,6 @@ protocol APIService {
     func request<T: RequestProtocol>(_ request: T) async throws -> T.Response
 }
 
-enum HttpMethod: String {
-    case get = "GET"
-    case post = "POST"
-    case delete = "DELETE"
-    // etc...
-}
-
-enum ParameterEncodingType {
-    case url
-    case json
-    
-    var contentType: String {
-        switch self {
-        case .url:
-            return "application/x-www-form-urlencoded"
-        case .json:
-            return "application/json; charset=utf-8"
-        }
-    }
-}
-
 protocol RequestProtocol {
     associatedtype Response: APIResponse
     var baseURL: URL { get }
@@ -66,7 +45,6 @@ protocol APIResponse: Decodable {
 final class NoResponse: APIResponse {
 }
 
-// 共通処理
 extension APIResponse {
 }
 
@@ -76,7 +54,13 @@ extension RequestProtocol {
         
         result["Accept"] = "application/json"
         
-        
         return result
     }
+}
+
+enum HttpMethod: String {
+    case get = "GET"
+    case post = "POST"
+    case delete = "DELETE"
+    // etc...
 }
