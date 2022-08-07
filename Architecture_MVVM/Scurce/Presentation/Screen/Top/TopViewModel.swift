@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import Combine
 
+@MainActor
 final class TopViewModel {
     
     enum DisplayState {
@@ -16,14 +18,32 @@ final class TopViewModel {
     
     @Published private (set) var desplayState: DisplayState = .initial
     
+    private let searchRepository: SearchRepository
     private weak var router: TopRouter?
     
     func viewDidLoad() {
         desplayState = .main
-        print("main")
+        
+        
+        test()
+    }
+    
+    init(searchRepository: SearchRepository) {
+        self.searchRepository = searchRepository
     }
     
     func set(router: TopRouter) {
         self.router = router
+    }
+    
+    private func test() {
+        Task {
+            do {
+                let response = try await searchRepository.getSearchRepositories(query: "swift")
+                print(response)
+            } catch let error {
+                print(error)
+            }
+        }
     }
 }

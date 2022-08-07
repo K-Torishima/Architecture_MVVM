@@ -16,7 +16,7 @@ extension SwinjectStoryboard {
             vc.viewModel.set(router: vc)
         }
         defaultContainer.register(TopViewModel.self) { r in
-            TopViewModel()
+            TopViewModel(searchRepository: r.resolve(SearchRepository.self)!)
         }
     }
 }

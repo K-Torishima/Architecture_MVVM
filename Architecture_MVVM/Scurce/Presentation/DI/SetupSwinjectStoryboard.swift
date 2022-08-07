@@ -11,6 +11,8 @@ import SwinjectStoryboard
 
 extension SwinjectStoryboard {
     @objc class func setup() {
-         setupScreen()
+        setupServices()
+        setupRepositories()
+        setupScreen()
     }
 }
