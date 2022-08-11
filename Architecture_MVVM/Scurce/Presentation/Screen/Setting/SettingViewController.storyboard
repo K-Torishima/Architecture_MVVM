@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Top View Controller-->
+        <!--Setting View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="TopViewController" customModule="Architecture_MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="SettingViewController" customModule="Architecture_MVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbE-S2-fBx">
-                                <rect key="frame" x="193" y="437.5" width="28.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SettingViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LK-IL-cxF">
+                                <rect key="frame" x="124" y="437.5" width="166.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,14 +26,14 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pbE-S2-fBx" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Gdy-0A-LzG"/>
-                            <constraint firstItem="pbE-S2-fBx" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="VRi-e3-sgH"/>
+                            <constraint firstItem="0LK-IL-cxF" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HaT-fz-NQa"/>
+                            <constraint firstItem="0LK-IL-cxF" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="QM5-yd-T6h"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="105"/>
+            <point key="canvasLocation" x="-23" y="92"/>
         </scene>
     </scenes>
     <resources>

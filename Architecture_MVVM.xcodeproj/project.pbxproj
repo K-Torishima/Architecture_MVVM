@@ -31,6 +31,18 @@
 		16899066289F865D006FC19D /* GitHubSearchAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16899065289F865D006FC19D /* GitHubSearchAPIResponse.swift */; };
 		16899069289FFBC3006FC19D /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16899068289FFBC3006FC19D /* Sort.swift */; };
 		1689906B289FFBD0006FC19D /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1689906A289FFBD0006FC19D /* Order.swift */; };
+		16AB1C3828A4F4C400D01126 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB1C3728A4F4C400D01126 /* SearchViewController.swift */; };
+		16AB1C3A28A4F4DB00D01126 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AB1C3928A4F4DB00D01126 /* SearchViewController.storyboard */; };
+		16AB1C3C28A4F4E700D01126 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB1C3B28A4F4E700D01126 /* SearchViewModel.swift */; };
+		16AB1C3E28A4F4FE00D01126 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB1C3D28A4F4FE00D01126 /* SearchRouter.swift */; };
+		16AB1C4228A5173A00D01126 /* NSObject+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB1C4128A5173A00D01126 /* NSObject+Extentions.swift */; };
+		16AB1C4428A5176B00D01126 /* UIViewController+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB1C4328A5176B00D01126 /* UIViewController+Extentions.swift */; };
+		16AB1C4628A51B5D00D01126 /* UIViewController+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB1C4528A51B5D00D01126 /* UIViewController+Container.swift */; };
+		16AB1C4828A51B8700D01126 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB1C4728A51B8700D01126 /* UIView+Layout.swift */; };
+		16AB1C4A28A520E600D01126 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB1C4928A520E600D01126 /* SettingViewController.swift */; };
+		16AB1C4C28A5212600D01126 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB1C4B28A5212600D01126 /* SettingViewModel.swift */; };
+		16AB1C4E28A5212F00D01126 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AB1C4D28A5212F00D01126 /* SettingViewController.storyboard */; };
+		16AB1C5028A5214700D01126 /* SettingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB1C4F28A5214700D01126 /* SettingRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +71,18 @@
 		16899065289F865D006FC19D /* GitHubSearchAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSearchAPIResponse.swift; sourceTree = "<group>"; };
 		16899068289FFBC3006FC19D /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
 		1689906A289FFBD0006FC19D /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		16AB1C3728A4F4C400D01126 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		16AB1C3928A4F4DB00D01126 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
+		16AB1C3B28A4F4E700D01126 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		16AB1C3D28A4F4FE00D01126 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		16AB1C4128A5173A00D01126 /* NSObject+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extentions.swift"; sourceTree = "<group>"; };
+		16AB1C4328A5176B00D01126 /* UIViewController+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extentions.swift"; sourceTree = "<group>"; };
+		16AB1C4528A51B5D00D01126 /* UIViewController+Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Container.swift"; sourceTree = "<group>"; };
+		16AB1C4728A51B8700D01126 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		16AB1C4928A520E600D01126 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		16AB1C4B28A5212600D01126 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		16AB1C4D28A5212F00D01126 /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
+		16AB1C4F28A5214700D01126 /* SettingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,9 +157,8 @@
 		16899037289DF301006FC19D /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				16899046289DF766006FC19D /* Top */,
-				16899041289DF590006FC19D /* Search */,
-				16899040289DF58A006FC19D /* Detail */,
+				16899046289DF766006FC19D /* TopTabBar */,
+				16AB1C3F28A50C4300D01126 /* Home */,
 				1689903F289DF581006FC19D /* Setting */,
 			);
 			path = Screen;
@@ -182,6 +205,7 @@
 			children = (
 				16899034289DF259006FC19D /* DI */,
 				16899037289DF301006FC19D /* Screen */,
+				16AB1C4028A5170600D01126 /* Extensions */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -189,6 +213,10 @@
 		1689903F289DF581006FC19D /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				16AB1C4928A520E600D01126 /* SettingViewController.swift */,
+				16AB1C4D28A5212F00D01126 /* SettingViewController.storyboard */,
+				16AB1C4F28A5214700D01126 /* SettingRouter.swift */,
+				16AB1C4B28A5212600D01126 /* SettingViewModel.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -203,6 +231,10 @@
 		16899041289DF590006FC19D /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				16AB1C3728A4F4C400D01126 /* SearchViewController.swift */,
+				16AB1C3928A4F4DB00D01126 /* SearchViewController.storyboard */,
+				16AB1C3D28A4F4FE00D01126 /* SearchRouter.swift */,
+				16AB1C3B28A4F4E700D01126 /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -242,7 +274,7 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		16899046289DF766006FC19D /* Top */ = {
+		16899046289DF766006FC19D /* TopTabBar */ = {
 			isa = PBXGroup;
 			children = (
 				16899047289DF77C006FC19D /* TopViewController.swift */,
@@ -250,7 +282,7 @@
 				1689904D289DF8EA006FC19D /* TopRouter.swift */,
 				1689904F289DF8F8006FC19D /* TopViewModel.swift */,
 			);
-			path = Top;
+			path = TopTabBar;
 			sourceTree = "<group>";
 		};
 		16899061289F85E4006FC19D /* Search */ = {
@@ -271,6 +303,26 @@
 				1689906A289FFBD0006FC19D /* Order.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		16AB1C3F28A50C4300D01126 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				16899041289DF590006FC19D /* Search */,
+				16899040289DF58A006FC19D /* Detail */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		16AB1C4028A5170600D01126 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				16AB1C4128A5173A00D01126 /* NSObject+Extentions.swift */,
+				16AB1C4328A5176B00D01126 /* UIViewController+Extentions.swift */,
+				16AB1C4528A51B5D00D01126 /* UIViewController+Container.swift */,
+				16AB1C4728A51B8700D01126 /* UIView+Layout.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,7 +393,9 @@
 			files = (
 				1689901E289DEE88006FC19D /* LaunchScreen.storyboard in Resources */,
 				1689901B289DEE88006FC19D /* Assets.xcassets in Resources */,
+				16AB1C4E28A5212F00D01126 /* SettingViewController.storyboard in Resources */,
 				1689904A289DF7AA006FC19D /* TopViewController.storyboard in Resources */,
+				16AB1C3A28A4F4DB00D01126 /* SearchViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,20 +408,30 @@
 			files = (
 				1689905C289F829D006FC19D /* SearchRepositoryImpl.swift in Sources */,
 				1689904E289DF8EA006FC19D /* TopRouter.swift in Sources */,
+				16AB1C3E28A4F4FE00D01126 /* SearchRouter.swift in Sources */,
 				16899054289DFBC3006FC19D /* APIServiceImpl.swift in Sources */,
 				1689906B289FFBD0006FC19D /* Order.swift in Sources */,
 				16899048289DF77C006FC19D /* TopViewController.swift in Sources */,
 				1689905A289F828E006FC19D /* SearchRepository.swift in Sources */,
+				16AB1C4628A51B5D00D01126 /* UIViewController+Container.swift in Sources */,
 				16899058289F7FAA006FC19D /* SwinjectStoryboard+Data.swift in Sources */,
 				16899064289F8645006FC19D /* GitHubSearchAPIRequest.swift in Sources */,
 				16899056289F6E57006FC19D /* APIError.swift in Sources */,
 				16899012289DEE86006FC19D /* AppDelegate.swift in Sources */,
+				16AB1C5028A5214700D01126 /* SettingRouter.swift in Sources */,
+				16AB1C3828A4F4C400D01126 /* SearchViewController.swift in Sources */,
 				1689904C289DF845006FC19D /* SwinjectStoryboard+Screen.swift in Sources */,
 				16899060289F836A006FC19D /* Owner.swift in Sources */,
+				16AB1C4C28A5212600D01126 /* SettingViewModel.swift in Sources */,
+				16AB1C4228A5173A00D01126 /* NSObject+Extentions.swift in Sources */,
+				16AB1C4428A5176B00D01126 /* UIViewController+Extentions.swift in Sources */,
 				16899069289FFBC3006FC19D /* Sort.swift in Sources */,
 				16899066289F865D006FC19D /* GitHubSearchAPIResponse.swift in Sources */,
+				16AB1C3C28A4F4E700D01126 /* SearchViewModel.swift in Sources */,
+				16AB1C4828A51B8700D01126 /* UIView+Layout.swift in Sources */,
 				16899050289DF8F8006FC19D /* TopViewModel.swift in Sources */,
 				16899014289DEE86006FC19D /* SceneDelegate.swift in Sources */,
+				16AB1C4A28A520E600D01126 /* SettingViewController.swift in Sources */,
 				16899052289DFBAB006FC19D /* APIService.swift in Sources */,
 				1689905E289F8338006FC19D /* Repository.swift in Sources */,
 				1689903E289DF4F0006FC19D /* SetupSwinjectStoryboard.swift in Sources */,
