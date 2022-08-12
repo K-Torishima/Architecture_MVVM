@@ -12,10 +12,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     override init() {
         super.init()
-        UITabBar.appearance().tintColor = UIColor.black
         
+        // TabBar
+        UITabBar.appearance().tintColor = UIColor.black
         // UITabBar.appearance().isTranslucent = false
         // UITabBar.appearance().backgroundColor = UIColor.white
+        
+        // Navigation
+        UINavigationBar.appearance().prefersLargeTitles = true
     }
 
 
