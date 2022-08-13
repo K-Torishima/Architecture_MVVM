@@ -57,10 +57,8 @@ final class TopViewController: UIViewController {
         switch tabItem.index {
         case .home:
             rootViewController = SearchViewController.instantiate()
-            rootViewController?.title = "Search"
         case .setting:
             rootViewController = SettingViewController.instantiate()
-            rootViewController?.title = "Setting"
         }
         let naviController = UINavigationController(rootViewController: rootViewController!)
         naviController.tabBarItem = UITabBarItem(title: tabItem.title,

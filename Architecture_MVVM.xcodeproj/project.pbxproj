@@ -43,6 +43,13 @@
 		16AB1C4C28A5212600D01126 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB1C4B28A5212600D01126 /* SettingViewModel.swift */; };
 		16AB1C4E28A5212F00D01126 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AB1C4D28A5212F00D01126 /* SettingViewController.storyboard */; };
 		16AB1C5028A5214700D01126 /* SettingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB1C4F28A5214700D01126 /* SettingRouter.swift */; };
+		16F8E32B28A7A4C700A95180 /* UITableView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8E32A28A7A4C700A95180 /* UITableView+Register.swift */; };
+		16F8E32D28A7A52100A95180 /* UIView+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8E32C28A7A52100A95180 /* UIView+Instantiate.swift */; };
+		16F8E32F28A7A55000A95180 /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8E32E28A7A55000A95180 /* UICollectionView+Register.swift */; };
+		16F8E33428A7CD0800A95180 /* SearchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8E33328A7CD0800A95180 /* SearchRowView.swift */; };
+		16F8E33628A7CD2300A95180 /* HostingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8E33528A7CD2300A95180 /* HostingTableViewCell.swift */; };
+		16F8E33B28A7FB8700A95180 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8E33928A7FB8700A95180 /* SearchTableViewCell.swift */; };
+		16F8E33C28A7FB8700A95180 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F8E33A28A7FB8700A95180 /* SearchTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +90,13 @@
 		16AB1C4B28A5212600D01126 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		16AB1C4D28A5212F00D01126 /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
 		16AB1C4F28A5214700D01126 /* SettingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRouter.swift; sourceTree = "<group>"; };
+		16F8E32A28A7A4C700A95180 /* UITableView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Register.swift"; sourceTree = "<group>"; };
+		16F8E32C28A7A52100A95180 /* UIView+Instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Instantiate.swift"; sourceTree = "<group>"; };
+		16F8E32E28A7A55000A95180 /* UICollectionView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift"; sourceTree = "<group>"; };
+		16F8E33328A7CD0800A95180 /* SearchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRowView.swift; sourceTree = "<group>"; };
+		16F8E33528A7CD2300A95180 /* HostingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingTableViewCell.swift; sourceTree = "<group>"; };
+		16F8E33928A7FB8700A95180 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		16F8E33A28A7FB8700A95180 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +249,7 @@
 				16AB1C3928A4F4DB00D01126 /* SearchViewController.storyboard */,
 				16AB1C3D28A4F4FE00D01126 /* SearchRouter.swift */,
 				16AB1C3B28A4F4E700D01126 /* SearchViewModel.swift */,
+				16F8E33228A7C90800A95180 /* Views */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -321,8 +336,38 @@
 				16AB1C4328A5176B00D01126 /* UIViewController+Extentions.swift */,
 				16AB1C4528A51B5D00D01126 /* UIViewController+Container.swift */,
 				16AB1C4728A51B8700D01126 /* UIView+Layout.swift */,
+				16F8E32C28A7A52100A95180 /* UIView+Instantiate.swift */,
+				16F8E32A28A7A4C700A95180 /* UITableView+Register.swift */,
+				16F8E32E28A7A55000A95180 /* UICollectionView+Register.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		16F8E33228A7C90800A95180 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				16F8E33828A7FB5A00A95180 /* UIKIt */,
+				16F8E33728A7FB4100A95180 /* SwiftUI */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		16F8E33728A7FB4100A95180 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				16F8E33528A7CD2300A95180 /* HostingTableViewCell.swift */,
+				16F8E33328A7CD0800A95180 /* SearchRowView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		16F8E33828A7FB5A00A95180 /* UIKIt */ = {
+			isa = PBXGroup;
+			children = (
+				16F8E33928A7FB8700A95180 /* SearchTableViewCell.swift */,
+				16F8E33A28A7FB8700A95180 /* SearchTableViewCell.xib */,
+			);
+			path = UIKIt;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +441,7 @@
 				16AB1C4E28A5212F00D01126 /* SettingViewController.storyboard in Resources */,
 				1689904A289DF7AA006FC19D /* TopViewController.storyboard in Resources */,
 				16AB1C3A28A4F4DB00D01126 /* SearchViewController.storyboard in Resources */,
+				16F8E33C28A7FB8700A95180 /* SearchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F8E32D28A7A52100A95180 /* UIView+Instantiate.swift in Sources */,
 				1689905C289F829D006FC19D /* SearchRepositoryImpl.swift in Sources */,
 				1689904E289DF8EA006FC19D /* TopRouter.swift in Sources */,
 				16AB1C3E28A4F4FE00D01126 /* SearchRouter.swift in Sources */,
@@ -416,25 +463,30 @@
 				16AB1C4628A51B5D00D01126 /* UIViewController+Container.swift in Sources */,
 				16899058289F7FAA006FC19D /* SwinjectStoryboard+Data.swift in Sources */,
 				16899064289F8645006FC19D /* GitHubSearchAPIRequest.swift in Sources */,
+				16F8E33628A7CD2300A95180 /* HostingTableViewCell.swift in Sources */,
 				16899056289F6E57006FC19D /* APIError.swift in Sources */,
 				16899012289DEE86006FC19D /* AppDelegate.swift in Sources */,
 				16AB1C5028A5214700D01126 /* SettingRouter.swift in Sources */,
 				16AB1C3828A4F4C400D01126 /* SearchViewController.swift in Sources */,
+				16F8E32F28A7A55000A95180 /* UICollectionView+Register.swift in Sources */,
 				1689904C289DF845006FC19D /* SwinjectStoryboard+Screen.swift in Sources */,
 				16899060289F836A006FC19D /* Owner.swift in Sources */,
 				16AB1C4C28A5212600D01126 /* SettingViewModel.swift in Sources */,
 				16AB1C4228A5173A00D01126 /* NSObject+Extentions.swift in Sources */,
+				16F8E33428A7CD0800A95180 /* SearchRowView.swift in Sources */,
 				16AB1C4428A5176B00D01126 /* UIViewController+Extentions.swift in Sources */,
 				16899069289FFBC3006FC19D /* Sort.swift in Sources */,
 				16899066289F865D006FC19D /* GitHubSearchAPIResponse.swift in Sources */,
 				16AB1C3C28A4F4E700D01126 /* SearchViewModel.swift in Sources */,
 				16AB1C4828A51B8700D01126 /* UIView+Layout.swift in Sources */,
 				16899050289DF8F8006FC19D /* TopViewModel.swift in Sources */,
+				16F8E32B28A7A4C700A95180 /* UITableView+Register.swift in Sources */,
 				16899014289DEE86006FC19D /* SceneDelegate.swift in Sources */,
 				16AB1C4A28A520E600D01126 /* SettingViewController.swift in Sources */,
 				16899052289DFBAB006FC19D /* APIService.swift in Sources */,
 				1689905E289F8338006FC19D /* Repository.swift in Sources */,
 				1689903E289DF4F0006FC19D /* SetupSwinjectStoryboard.swift in Sources */,
+				16F8E33B28A7FB8700A95180 /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

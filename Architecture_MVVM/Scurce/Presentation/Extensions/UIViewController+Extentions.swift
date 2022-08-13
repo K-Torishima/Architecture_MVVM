@@ -28,11 +28,15 @@ extension StoryboardInstantiatable where Self: NSObject {
 
 extension StoryboardInstantiatable where Self: UIViewController {
     static func instantiate() -> Self {
-        return storyboard.instantiateInitialViewController() as? Self ?? { fatalError("InitialViewControllerを変換できません") }()
+        return storyboard.instantiateInitialViewController() as? Self ?? {
+            fatalError("InitialViewControllerを変換できません")
+        }()
     }
 
     static func instantiate(identifier: String) -> Self {
-        return storyboard.instantiateViewController(withIdentifier: identifier) as? Self ?? { fatalError("\(identifier)をViewControllerに変換できません") }()
+        return storyboard.instantiateViewController(withIdentifier: identifier) as? Self ?? {
+            fatalError("\(identifier)をViewControllerに変換できません")
+        }()
     }
 }
 

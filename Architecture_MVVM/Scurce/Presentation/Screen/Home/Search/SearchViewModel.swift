@@ -54,7 +54,6 @@ final class SearchViewModel {
                 defer { Task { @MainActor in progressState = .none } }
                 let response =  try await searchRepository.getSearchRepositories(query: query)
                 datasource.append(contentsOf: response.items)
-                
             } catch let error {
                 print(error.localizedDescription)
             }

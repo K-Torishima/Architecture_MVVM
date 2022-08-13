@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // UITabBar.appearance().backgroundColor = UIColor.white
         
         // Navigation
-        UINavigationBar.appearance().prefersLargeTitles = true
+        // UINavigationBar.appearance().prefersLargeTitles = true
     }
 
 

@@ -12,7 +12,20 @@ final class SearchViewController: UIViewController {
     
     var viewModel: SearchViewModel!
     private var cancelables = Set<AnyCancellable>()
-    private var searchController: UISearchController!
+    
+    @IBOutlet private weak var searchBar: UISearchBar! {
+        didSet {
+            searchBar.delegate = self
+        }
+    }
+    
+    @IBOutlet private weak var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = self
+            tableView.registerCell(SearchTableViewCell.self)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +35,12 @@ final class SearchViewController: UIViewController {
     }
     
     private func initialize() {
-        setupSearchController()
+        
     }
     
     private func bind() {
         viewModel.$displayState
+            .receive(on: DispatchQueue.main)
             .sink { state in
                 switch state {
                 case .initial:
@@ -36,6 +50,7 @@ final class SearchViewController: UIViewController {
                 }
             }.store(in: &cancelables)
         viewModel.$progressState
+            .receive(on: DispatchQueue.main)
             .sink { state in
                 switch state {
                 case .none:
@@ -44,38 +59,41 @@ final class SearchViewController: UIViewController {
                     print("fetch")
                 }
             }.store(in: &cancelables)
-//        viewModel.isSearched
-//            .sink { _ in
-//
-//
-//            }.store(in: &cancelables)
         viewModel.$datasource
-            .sink { datas in
-                // リロード
-                print(datas.count)
+            .receive(on: DispatchQueue.main)
+            .sink { _ in
+                self.tableView.reloadData()
             }.store(in: &cancelables)
         
-    }
-    
-    private func setupSearchController() {
-        // 検索結果を別の画面に表示することができる
-        // 検索結果表示用画面が特になければ、ここは入れなくて良い
-        // 検索結果と初期表示の内容を分けたければ別で良さそう
-        searchController = UISearchController(searchResultsController: nil)
-        searchController.delegate = self
-        searchController.searchBar.delegate = self
-        // フォーカスの色と、キャンセルの文言の色が変わる
-        searchController.searchBar.tintColor = .lightGray
-        navigationItem.searchController = searchController
     }
 }
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let searchText = searchBar.text else {
+        guard let searchText = searchBar.text,
+              !searchText.isEmpty else {
             return
         }
         viewModel.apply(searchText: searchText)
+    }
+}
+
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.datasource.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // swiftUI
+        //let cell = HostingTableViewCell<SearchRowView>()
+        //cell.hosting(SearchRowView(data: viewModel.datasource[indexPath.row]), parent: self)
+        
+        // UIKit
+        let cell: SearchTableViewCell = tableView.dequeue(indexPath: indexPath)
+        cell.apply(data: viewModel.datasource[indexPath.row])
+        return cell
+        
     }
 }
 
@@ -89,26 +107,44 @@ extension SearchViewController: SearchRouter {
  表示されている画面の階層の上に新しいコントローラー画面を出現させることができる
  検索してその画面で表示するだけの場合は、UISearchControllerで対応しなくても良い
  
+ UISearchControllerの動きは検索する前の画面と検索結果を出す画面が別の場合に有効
+ 一枚の検索リスト画面の場合は、SearchBarだけの組み合わせの方が良い
+ TableViewを組み合わせたりするとSearchBarが表示されなくなってしまう
+ 
  */
 
-extension SearchViewController: UISearchControllerDelegate {
-    func presentSearchController(_ searchController: UISearchController) {
-        //print("searchbarをタップして一番最初に起動")
-    }
-    
-    func willPresentSearchController(_ searchController: UISearchController) {
-        //print("presentSearchControllerメソッドの後に呼ばれる")
-    }
-    
-    func didPresentSearchController(_ searchController: UISearchController) {
-        //print("フォーカス当た理終わってキーボード開いたら")
-    }
-    
-    func willDismissSearchController(_ searchController: UISearchController) {
-        //print("キャンセルボタンを押してすぐ")
-    }
-    
-    func didDismissSearchController(_ searchController: UISearchController) {
-        //print("キーボード閉じ終わってから")
-    }
-}
+//private var searchController: UISearchController!
+//
+//private func setupSearchController() {
+//    // 検索結果を別の画面に表示することができる
+//    // 検索結果表示用画面が特になければ、ここは入れなくて良い
+//    // 検索結果と初期表示の内容を分けたければ別で良さそう
+//    searchController = UISearchController(searchResultsController: nil)
+//    searchController.delegate = self
+//    searchController.searchBar.delegate = self
+//    // フォーカスの色と、キャンセルの文言の色が変わる
+//    searchController.searchBar.tintColor = .lightGray
+//    navigationItem.searchController = searchController
+//}
+
+//extension SearchViewController: UISearchControllerDelegate {
+//    func presentSearchController(_ searchController: UISearchController) {
+//        //print("searchbarをタップして一番最初に起動")
+//    }
+//
+//    func willPresentSearchController(_ searchController: UISearchController) {
+//        //print("presentSearchControllerメソッドの後に呼ばれる")
+//    }
+//
+//    func didPresentSearchController(_ searchController: UISearchController) {
+//        //print("フォーカス当た理終わってキーボード開いたら")
+//    }
+//
+//    func willDismissSearchController(_ searchController: UISearchController) {
+//        //print("キャンセルボタンを押してすぐ")
+//    }
+//
+//    func didDismissSearchController(_ searchController: UISearchController) {
+//        //print("キーボード閉じ終わってから")
+//    }
+//}
