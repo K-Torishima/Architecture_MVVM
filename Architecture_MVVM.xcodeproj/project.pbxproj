@@ -45,6 +45,7 @@
 		16AB1C4C28A5212600D01126 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB1C4B28A5212600D01126 /* SettingViewModel.swift */; };
 		16AB1C4E28A5212F00D01126 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AB1C4D28A5212F00D01126 /* SettingViewController.storyboard */; };
 		16AB1C5028A5214700D01126 /* SettingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB1C4F28A5214700D01126 /* SettingRouter.swift */; };
+		16B4AEB128A92A020046F65B /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B4AEB028A92A020046F65B /* SettingView.swift */; };
 		16F8E32B28A7A4C700A95180 /* UITableView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8E32A28A7A4C700A95180 /* UITableView+Register.swift */; };
 		16F8E32D28A7A52100A95180 /* UIView+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8E32C28A7A52100A95180 /* UIView+Instantiate.swift */; };
 		16F8E32F28A7A55000A95180 /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8E32E28A7A55000A95180 /* UICollectionView+Register.swift */; };
@@ -101,6 +102,7 @@
 		16AB1C4B28A5212600D01126 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		16AB1C4D28A5212F00D01126 /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
 		16AB1C4F28A5214700D01126 /* SettingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRouter.swift; sourceTree = "<group>"; };
+		16B4AEB028A92A020046F65B /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		16F8E32A28A7A4C700A95180 /* UITableView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Register.swift"; sourceTree = "<group>"; };
 		16F8E32C28A7A52100A95180 /* UIView+Instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Instantiate.swift"; sourceTree = "<group>"; };
 		16F8E32E28A7A55000A95180 /* UICollectionView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift"; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				16AB1C4928A520E600D01126 /* SettingViewController.swift */,
+				16B4AEB028A92A020046F65B /* SettingView.swift */,
 				16AB1C4D28A5212F00D01126 /* SettingViewController.storyboard */,
 				16AB1C4F28A5214700D01126 /* SettingRouter.swift */,
 				16AB1C4B28A5212600D01126 /* SettingViewModel.swift */,
@@ -533,6 +536,7 @@
 				16AB1C5028A5214700D01126 /* SettingRouter.swift in Sources */,
 				16AB1C3828A4F4C400D01126 /* SearchViewController.swift in Sources */,
 				16F8E32F28A7A55000A95180 /* UICollectionView+Register.swift in Sources */,
+				16B4AEB128A92A020046F65B /* SettingView.swift in Sources */,
 				16F8E34728A8C40500A95180 /* ViewControllerBase.swift in Sources */,
 				1689904C289DF845006FC19D /* SwinjectStoryboard+Screen.swift in Sources */,
 				16899060289F836A006FC19D /* Owner.swift in Sources */,

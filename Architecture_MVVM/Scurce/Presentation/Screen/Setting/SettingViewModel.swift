@@ -14,6 +14,10 @@ final class SettingViewModel {
     func viewDidLoad() {
     }
     
+    func test() {
+        router?.goToTest()
+    }
+    
     func set(router: SettingRouter) {
         self.router = router
     }
