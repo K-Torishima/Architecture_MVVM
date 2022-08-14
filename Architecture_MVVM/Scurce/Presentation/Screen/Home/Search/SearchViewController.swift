@@ -64,7 +64,6 @@ final class SearchViewController: UIViewController {
             .sink { _ in
                 self.tableView.reloadData()
             }.store(in: &cancelables)
-        
     }
 }
 
@@ -83,7 +82,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         viewModel.datasource.count
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // swiftUI
         //let cell = HostingTableViewCell<SearchRowView>()
@@ -93,7 +91,11 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let cell: SearchTableViewCell = tableView.dequeue(indexPath: indexPath)
         cell.apply(data: viewModel.datasource[indexPath.row])
         return cell
-        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRowAt(indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

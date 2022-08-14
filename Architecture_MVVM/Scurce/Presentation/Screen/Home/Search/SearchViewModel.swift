@@ -46,6 +46,11 @@ final class SearchViewModel {
         fetchRepositories(query: searchText)
     }
     
+    func didSelectRowAt(_ row: Int) {
+        let data = datasource[row]
+        router?.goToSearchDetail(data: data)
+    }
+    
     // 検索して最初のfetch
     private func fetchRepositories(query: String) {
         progressState = .fetch
