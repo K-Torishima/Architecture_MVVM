@@ -15,8 +15,8 @@ final class SearchRepositoryImpl: SearchRepository {
         self.apiService = apiService
     }
     
-    func getSearchRepositories(query: String, sort: Sort, order: Order, page: Int, perPage: Int) async throws -> GitHubSearchAPIResponse {
-        let request = GitHubSearchAPIRequest(query: query, sort: sort, order: order, page: page, perPage: page)
+    func getSearchRepositories(query: String, sort: Sort?, order: Order?, page: Int?, perPage: Int?) async throws -> GitHubSearchAPIResponse {
+        let request = GitHubSearchAPIRequest(query: query, sort: sort, order: order, page: page, perPage: perPage)
         let response = try await apiService.request(request)
         return response
     }

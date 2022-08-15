@@ -26,6 +26,9 @@ final class SearchViewModel {
     @Published private (set) var progressState: ProgressState = .none
     @Published private (set) var datasource: [Repository] = []
     
+    private var page: Int = 1
+    private let perPage: Int = 20
+    
     private let searchRepository: SearchRepository
     private weak var router: SearchRouter?
     
@@ -43,7 +46,9 @@ final class SearchViewModel {
     
     func apply(searchText: String) {
         reset()
-        fetchRepositories(query: searchText)
+        // fetchRepositories(query: searchText)
+        
+        fetchRepositories(query: searchText, page: page, perPage: perPage)
     }
     
     func didSelectRowAt(_ row: Int) {
@@ -51,14 +56,36 @@ final class SearchViewModel {
         router?.goToSearchDetail(data: data)
     }
     
-    // 検索して最初のfetch
+    func hasNext() {
+        
+    }
+    
+    // 指定なし
     private func fetchRepositories(query: String) {
         progressState = .fetch
         Task {
             do {
                 defer { Task { @MainActor in progressState = .none } }
-                let response =  try await searchRepository.getSearchRepositories(query: query)
+                let response = try await searchRepository.getSearchRepositories(query: query)
                 datasource.append(contentsOf: response.items)
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func fetchRepositories(query: String, page: Int, perPage: Int) {
+        progressState = .fetch
+        Task {
+            do {
+                defer { Task { @MainActor in progressState = .none } }
+                let response = try await searchRepository.getSearchRepositories(query: query,
+                                                                                sort: nil,
+                                                                                order: nil,
+                                                                                page: page,
+                                                                                perPage: perPage)
+                datasource.append(contentsOf: response.items)
+                self.page += 1
             } catch let error {
                 print(error.localizedDescription)
             }

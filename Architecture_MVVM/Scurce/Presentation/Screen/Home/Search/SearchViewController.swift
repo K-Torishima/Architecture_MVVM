@@ -35,7 +35,8 @@ final class SearchViewController: UIViewController {
     }
     
     private func initialize() {
-        
+        title = "Search"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func bind() {
