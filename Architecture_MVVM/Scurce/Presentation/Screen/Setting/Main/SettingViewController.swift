@@ -23,13 +23,11 @@ final class SettingViewController: UIViewController {
         let settingView: SettingView = SettingView(handler: { [weak self] event in
             switch event {
             case .cell1:
-                print("cell tap ")
-                // これで画面遷移はできる
-                self?.viewModel.test()
+                self?.viewModel.goToSample(text: "cell 1からの画面遷移")
             case .cell2:
-                break
+                self?.viewModel.goToSample(text: "cell 2からの画面遷移")
             case .cell3:
-                break
+                self?.viewModel.goToSample(text: "cell 3からの画面遷移")
             }
             
         })

@@ -14,8 +14,8 @@ final class SettingViewModel {
     func viewDidLoad() {
     }
     
-    func test() {
-        router?.goToTest()
+    func goToSample(text: String) {
+        router?.goToSample(text: text)
     }
     
     func set(router: SettingRouter) {

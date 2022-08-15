@@ -8,13 +8,13 @@
 import UIKit
 
 protocol SettingRouter: AnyObject {
-    func goToTest()
+    func goToSample(text: String)
     
 }
 
 extension SettingRouter where Self: UIViewController {
-    func goToTest() {
-        let vc = SearchViewController.instantiate()
+    func goToSample(text: String) {
+        let vc = SampleViewController(rootView: SampleView(text: text))
         navigationController?.pushViewController(vc, animated: true)
     }
 }

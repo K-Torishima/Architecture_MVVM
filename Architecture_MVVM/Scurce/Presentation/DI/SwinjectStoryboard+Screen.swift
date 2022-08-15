@@ -42,5 +42,7 @@ extension SwinjectStoryboard {
         defaultContainer.register(SettingViewModel.self) { r in
             SettingViewModel()
         }
+        defaultContainer.storyboardInitCompleted(SampleViewController.self) { r, vc in
+        }
     }
 }

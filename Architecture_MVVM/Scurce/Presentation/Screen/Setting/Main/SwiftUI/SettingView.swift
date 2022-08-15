@@ -25,24 +25,16 @@ struct SettingView: View {
     var body: some View {
         List {
             Section {
-                HStack {
-                    Text("SettingView")
-                    Spacer()
-                }
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    print("tap cell1")
+                
+                SettingRowView(rowLabel: "Cell 1") {
                     handler?(.cell1)
                 }
-                Text("SettingView")
-                    .onTapGesture {
-                        
-                    }
-                Text("SettingView")
-                    .onTapGesture {
-                      
-                    }
-                
+                SettingRowView(rowLabel: "Cell 2") {
+                    handler?(.cell2)
+                }
+                SettingRowView(rowLabel: "Cell 3") {
+                    handler?(.cell3)
+                }
             }
             
             Section(header: Text("section2")) {
